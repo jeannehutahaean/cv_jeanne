@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <!-- Header & Navigation -->
+    <header class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="#">Logo.</a>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <i class="bx bx-menu"></i>
+            </label>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mode-switch">
+                <input type="checkbox" id="darkModeToggle">
+                <label for="darkModeToggle" class="mode-icon">
+                    <i class="bx bxs-moon"></i>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Section -->
+    <section id="home" class="hero container">
+        <div class="content">
+            <h1>Hi, I'm <span>Jeanne Stephan</span></h1>
+            <p>I’m and I am a passionate IT student currently pursuing my degree in Information Technology. As a lifelong learner, I am constantly seeking to expand my knowledge and skills in various areas of technology.</p>
+            <div class="social-links">
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="f-1.png" alt="Sara" class="hero-img">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about container">
+        <h2>About Me</h2>
+        <p>
+            I am a passionate web developer with experience in creating scalable and user-friendly websites and applications.
+            My goal is to deliver innovative solutions that help businesses grow and thrive.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills container">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+        </ul>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio container">
+        <h2>Portfolio</h2>
+        <p>Here are some of my latest projects:</p>
+        <div class="projects">
+            <!-- Tambahkan gambar atau deskripsi proyek di sini -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact container">
+        <h2>Contact</h2>
+        <p>If you want to work with me, feel free to reach out via email or social media.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Jeanne. All rights reserved.</p>
+    </footer>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+        if (isDarkMode) {
+            body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
+    </script>
+</body>
+
+</html>
