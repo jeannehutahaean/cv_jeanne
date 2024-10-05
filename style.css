@@ -31,6 +31,7 @@ ul {
     align-items: center;
     padding: 20px 0;
     border-bottom: 1px solid #ddd;
+    background-color: transparent; /* Default for light mode */
 }
 
 .logo a {
@@ -48,15 +49,16 @@ ul {
 .menu li a {
     text-decoration: none;
     font-weight: 500;
-    color: #333;
+    color: #333; /* Default color for light mode */
     padding: 10px 20px;
     border-radius: 5px;
     transition: color 0.3s, background-color 0.3s;
 }
 
-.menu li a:hover, .menu li a.active {
-    color: #fff;
-    background-color: #f9532d;
+.menu li a:hover, 
+.menu li a.active {
+    color: #fff; /* Hover color in light mode */
+    background-color: #f9532d; /* Hover background color in light mode */
 }
 
 /* Dark Mode Toggle */
@@ -233,23 +235,21 @@ footer {
     color: #fff;
 }
 
-/* Navbar Styles for Dark Mode */
+/* Navbar Styles in Dark Mode */
 .dark-mode .navbar {
-    background-color: #1c1c1c; /* Warna latar belakang lebih gelap */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for navbar */
+    border-bottom: 1px solid #444; /* Optional: Add border for separation */
 }
 
-.dark-mode .navbar a {
-    color: #f0f0f0; /* Warna teks yang lebih terang untuk meningkatkan kontras */
+.dark-mode .menu li a {
+    color: #fff; /* Text color white */
 }
 
-.dark-mode .navbar a:hover {
-    color: #f9532d; /* Warna saat hover untuk efek yang jelas */
+.dark-mode .menu li a:hover, 
+.dark-mode .menu li a.active {
+    color: #fff; /* Keep text color white on hover */
+    background-color: #f9532d; /* Background color on hover */
 }
-
-.dark-mode .logo a {
-    color: #f9532d; /* Warna logo tetap menonjol */
-}
-
 
 /* Hero Section for Dark Mode */
 .dark-mode .hero {
@@ -265,14 +265,6 @@ footer {
 }
 
 .dark-mode .logo a {
-    color: #f9532d;
-}
-
-.dark-mode .menu li a {
-    color: #ddd;
-}
-
-.dark-mode .menu li a:hover, .dark-mode .menu li a.active {
     color: #f9532d;
 }
 
